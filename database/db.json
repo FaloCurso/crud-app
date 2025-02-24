@@ -3,9 +3,12 @@
     {
       "id": "1",
       "admin": true,
-      "nombre": "Empleado1",
-      "apellidos":"xxxxxx",
-      "foto": "url"
+      "nombre": "Falo",
+      "apellidos":"Fernandez",
+      "foto": "url",
+      "username": "pepitoM",
+      "password": "123456*"
+     
     }
     
   ],
