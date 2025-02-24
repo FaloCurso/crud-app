@@ -4,8 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/index.css">
+    
 </head>
 <body>
+    <div class = "form-container"> 
+        <h1> Acceso del empleado </h1>
+        <div class=" form-group">
+            <form id="loginEmpleado">
+               <div class = "formulario">
+                   <label for="username">Nombre de usuario</label>
+                   <input type="text" id ="username" required>
+                   <label for="password">Contraseña:</label>
+                   <input type="password" id="password" required>
+               </div>
+                
+                <div class="button-group">
+                    <button type="button" id="loginButton">Iniciar Sesión</button>
+                </div>
+
+
+            </form>
+            <div class="error-box" id="errorBox"></div>
+
+        </div>
+        
+
+
+    </div>
+
+    <script type="module" src="../src/index.js" ></script>
     
+
 </body>
 </html>
