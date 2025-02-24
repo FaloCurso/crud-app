@@ -1,21 +1,25 @@
 {
-  "empleados": [
+  "employees": [
     {
-      "id": "1",
+      "name": "Empleado1",
+      "surname":"xxxxxx",
+      "username": "pepitoM",
+      "password": "123456*",
       "admin": true,
-      "nombre": "Empleado1",
-      "apellidos":"xxxxxx",
-      "foto": "url"
+      "photo": "url",
+      "id": "1"
     }
     
   ],
-  "record": [
+  "records": [
       {
-      "id": "1",
-      "fecha": "2025-02-24",
-      "e_s":true,
-      "hora_Entrada": "09:00",
-      "hora_Salida": "12:30"
+      "employee_id": "1",
+      "date": "2025-02-24",
+      "e/d": true,
+      "entry_Time": "09:00",
+      "departure_Time": "12:30",
+      "worked_Hours": "3:30",
+      "id": "3ad7"
       }
     ]
 }
