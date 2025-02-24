@@ -1,0 +1,12 @@
+{
+  "empleados": [
+    {
+      "id": "1",
+      "admin": true,
+      "nombre": "Empleado1",
+      "apellidos":"xxxxxx",
+      "foto": "url"
+    }
+    
+  ]
+}
