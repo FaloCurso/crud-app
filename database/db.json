@@ -1,0 +1,21 @@
+{
+  "empleados": [
+    {
+      "id": "1",
+      "admin": true,
+      "nombre": "Empleado1",
+      "apellidos":"xxxxxx",
+      "foto": "url"
+    }
+    
+  ],
+  "record": [
+      {
+      "id": "1",
+      "fecha": "2025-02-24",
+      "e_s":true,
+      "hora_Entrada": "09:00",
+      "hora_Salida": "12:30"
+      }
+    ]
+}
