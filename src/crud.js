@@ -1,9 +1,11 @@
 //Variables que contienen la URL del servidor y los filtros para las peticiones
 const URLEMPLOYEES = "http://localhost:3000/employees/";
-const URLRECORDS = "http://localhost:3000/departments/";
+const URLRECORDS = "http://localhost:3000/records/";
 const FILTEREMPLOYEEID = "?employee_id=";
 const URLAND = "&";
-const FILTERDATE = "?date=";
+const FILTERDATE = "date=";
+const FILTERNAME = "?name=";
+const FILTERSURNAME = "surname=";
 
 //Operaciones CRUD para employees
 async function getAllEmployees() {
@@ -39,6 +41,21 @@ async function getOneEmployee(employeeID) {
     return null;
   };
 };
+
+async function getEmployeeByNameSurname(name, surname){
+  try {
+    const response = await fetch(URLEMPLOYEES + FILTERNAME + name + URLAND + FILTERSURNAME + surname);
+    if (!response.ok) {
+      throw new Error(
+        `Error ${response.status}: No se pudo obtener el empleado`
+      );
+    }
+    const employee = await response.json();
+    return employee;
+  } catch (error) {
+    console.error("Error: " + error);
+  }
+}
 
 async function createEmployee(name, surname, username, password, admin, photo) {
   try {
@@ -265,6 +282,7 @@ async function deleteRecord(id) {
 export {
   getAllEmployees,
   getOneEmployee,
+  getEmployeeByNameSurname,
   createEmployee,
   updateEmployee,
   deleteEmployee,

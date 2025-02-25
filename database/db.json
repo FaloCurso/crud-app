@@ -1,34 +1,60 @@
 {
   "employees": [
     {
-      "name": "Empleado1",
-      "surname":"xxxxxx",
+      "name": "Lucas",
+      "surname": "Rodriguez",
       "username": "pepitoM",
-      "password": "123456*",
+      "password": "123456",
       "admin": true,
-      "photo": "url",
+      "photo": "../img/foto1.jpg",
       "id": "1"
     },
     {
-      "name": "Empleado2",
-      "surname":"xxxxxx",
+      "name": "Margarita",
+      "surname": "Fernandez",
       "username": "pepitaM",
-      "password": "98765*",
+      "password": "98765",
       "admin": false,
-      "photo": "url",
+      "photo": "../img/foto3.jpg",
       "id": "2"
+    },
+    {
+      "name": "Marta",
+      "surname": "Lopez",
+      "username": "Martita",
+      "password": "112233.",
+      "admin": false,
+      "photo": "../img/foto4.jpg",
+      "id": "3"
+    },
+    {
+      "name": "Lucas",
+      "surname": "Mendez",
+      "username": "lucasM",
+      "password": "123456",
+      "admin": true,
+      "photo": "../img/foto1.jpg",
+      "id": "4"
     }
-    
   ],
   "records": [
-      {
+    {
       "employee_id": "1",
       "date": "2025-02-24",
-      "e/d": true,
+      "e_d": true,
       "entry_Time": "09:00",
       "departure_Time": "12:30",
       "worked_Hours": "3:30",
       "id": "3ad7"
-      }
-    ]
+    },
+    {
+      "employee_id": "2",
+      "date": "2025-02-25",
+      "e_d": true,
+      "entry_Time": "09:00",
+      "departure_Time": "",
+      "worked_Hours": "",
+      "id": "3ad8"
+    }
+  ]
 }
