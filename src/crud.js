@@ -1,6 +1,6 @@
 //Variables que contienen la URL del servidor y los filtros para las peticiones
 const URLEMPLOYEES = "http://localhost:3000/employees/";
-const URLRECORDS = "http://localhost:3000/departments/";
+const URLRECORDS = "http://localhost:3000/records/";
 const FILTEREMPLOYEEID = "?employee_id=";
 const URLAND = "&";
 const FILTERDATE = "?date=";
@@ -162,9 +162,10 @@ async function getRecordForUserAndDate(employeeId, date) {
       URLRECORDS + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
     );
     if (!response.ok) {
-      throw new Error(
-        `Error ${response.status}: No se pudo obtener los registros por empleado y fecha.`
-      );
+      // throw new Error(
+      //   `Error ${response.status}: No se pudo obtener los registros por empleado y fecha.`
+      // );
+      return "No hay registros";
     };
     const recordsUserDate = await response.json();
     return recordsUserDate;

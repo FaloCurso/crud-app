@@ -1,4 +1,5 @@
-import {getAllEmployees} from "./crud.js"
+import {getAllEmployees, getOneEmployee} from "./crud.js"
+let vId ;
 
 document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('loginButton');
@@ -15,32 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
         const empleados = await getAllEmployees();
         let ventrada = 0;
         empleados.forEach(empleado => {
+            
             if (empleado.username === username && empleado.password === password){
+                vId= empleado.id; // para pasarlo como argumento en la página que vamos abrir
                 if (empleado.admin){
                     ventrada = 1;
                 }else{
                     ventrada = 2;
                 }
-            }else if (empleado.username === username && empleado.password !== password){
-                console.log("contraseña incorecta");
-                // errorBox.innerHTML ="contraseña incorrecta"
-                // errorBox.style.display = "block";
-
-            }else if (empleado.username !== username && empleado.password === password) {
-                console.log("usuaio no valido incorecta");
             }
             
         });
         if (ventrada===1){
             // administrador
             alert("entrada como administrador");
+
         }else if  (ventrada ===2) {
             // usuario admitido
-            alert("entrada como usuario");
-        }
-            // console.log(empleados.username + " " + empleados.password);
+            // alert("entrada como usuario");
+            window.location.href = `entrada_Salida.html?id=${vId}`;
 
-            
+        }else{
+            alert ("contraseña o nombre de usuario no validos")
+        }
         
     });
     

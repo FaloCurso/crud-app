@@ -1,0 +1,60 @@
+.employee-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.employee-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.employee-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-container button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.entrada-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.entrada-btn:hover {
+    background-color: #218838;
+}
+
+
+
+.cerrar-btn {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cerrar-btn:hover {
+    background-color: #5a6268;
+}
+
