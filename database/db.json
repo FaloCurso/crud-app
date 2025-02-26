@@ -13,7 +13,7 @@
       "name": "Margarita",
       "surname": "Fernandez",
       "username": "pepitaM",
-      "password": "98765",
+      "password": "12345",
       "admin": false,
       "photo": "../img/foto3.jpg",
       "id": "2"
@@ -41,10 +41,10 @@
     {
       "employee_id": "1",
       "date": "2025-02-24",
-      "e_d": true,
+      "e_d": false,
       "entry_Time": "09:00",
       "departure_Time": "12:30",
-      "worked_Hours": "3:30",
+      "worked_Hours": "03:30",
       "id": "3ad7"
     },
     {

@@ -1,10 +1,11 @@
 //Variables que contienen la URL del servidor y los filtros para las peticiones
 const URLEMPLOYEES = "http://localhost:3000/employees/";
 const URLRECORDS = "http://localhost:3000/records/";
-const FILTEREMPLOYEEID = "?employee_id=";
+const FILTEREMPLOYEEID = "employee_id=";
 const URLAND = "&";
+const URLFILTER = "?"
 const FILTERDATE = "date=";
-const FILTERNAME = "?name=";
+const FILTERNAME = "name=";
 const FILTERSURNAME = "surname=";
 
 //Operaciones CRUD para employees
@@ -44,7 +45,7 @@ async function getOneEmployee(employeeID) {
 
 async function getEmployeeByNameSurname(name, surname){
   try {
-    const response = await fetch(URLEMPLOYEES + FILTERNAME + name + URLAND + FILTERSURNAME + surname);
+    const response = await fetch(URLEMPLOYEES + URLFILTER + FILTERNAME +  name + URLAND + FILTERSURNAME + surname);
     if (!response.ok) {
       throw new Error(
         `Error ${response.status}: No se pudo obtener el empleado`
@@ -96,13 +97,13 @@ async function updateEmployee(
       },
       body: JSON.stringify({ name, surname, username, password, admin, photo }),
     });
-    if (!response.ok) {
+    if (!employee.ok) {
       throw new Error(
         `Error ${response.status}: No se pudo actualizar el empleado.`
       );
     };
 
-    const updatedEmployee = await response.json();
+    const updatedEmployee = await employee.json();
     alert("Datos actualizados correctamente.");
     return updatedEmployee;
   } catch (error) {
@@ -118,6 +119,9 @@ async function deleteEmployee(id) {
         "Content-Type": "application/json",
       },
     });
+    if (!response.ok) {
+      throw new Error(`Error ${response.status}: No se pudo eliminar el empleado`);
+    }
     alert("Empleado eliminado correctamente.");
   } catch (error) {
     console.error("Error: " + error);
@@ -141,9 +145,25 @@ async function getAllRecords() {
   };
 };
 
+async function getRecord(id) {
+  try {
+    const response = await fetch(URLRECORDS + id);
+    if (!response.ok) {
+      throw new Error(
+        `Error ${response.status}: No se pudo obterner el registro.`
+      );
+    };
+    const record = await response.json();
+    return record;
+  } catch (error) {
+    console.error("Error: " + error);
+    return null;
+  };
+}
+
 async function getRecordForUser(employeeId) {
   try {
-    const response = await fetch(URLRECORDS + FILTEREMPLOYEEID + employeeId);
+    const response = await fetch(URLRECORDS + URLFILTER + FILTEREMPLOYEEID + employeeId);
     if (!response.ok) {
       throw new Error(
         `Error ${response.status}: No se pudieron obtener los registros por empleado.`
@@ -159,7 +179,7 @@ async function getRecordForUser(employeeId) {
 
 async function getRecordForDate(date) {
   try {
-    const response = await fetch(URLRECORDS + FILTERDATE + date);
+    const response = await fetch(URLRECORDS + URLFILTER +  FILTERDATE + date);
     if (!response.ok) {
       throw new Error(
         `Error ${response.status}: No se pudo obtener los registros por fecha.`
@@ -176,7 +196,7 @@ async function getRecordForDate(date) {
 async function getRecordForUserAndDate(employeeId, date) {
   try {
     const response = await fetch(
-      URLRECORDS + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
+      URLRECORDS + URLFILTER + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
     );
     if (!response.ok) {
       throw new Error(
@@ -217,7 +237,7 @@ async function createRecord(
       }),
     });
 
-    if (!response.ok) {
+    if (!record.ok) {
       throw new Error(
         `Error ${response.status}: No se pudo crear el registro.`
       );
@@ -229,12 +249,13 @@ async function createRecord(
 };
 
 async function updateRecord(
-  id,
+  employee_id,
   date,
   e_d,
   entry_Time,
   departure_Time,
-  worked_Hours
+  worked_Hours,
+  id,
 ) {
   try {
     const record = await fetch(URLRECORDS + id, {
@@ -243,26 +264,29 @@ async function updateRecord(
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
+        employee_id,
         date,
         e_d,
         entry_Time,
         departure_Time,
         worked_Hours,
+        id,
       }),
     });
-    if (!response.ok) {
+    if (!record.ok) {
       throw new Error(
-        `Error ${response.status}: No se pudo actualizar el empleado.`
+        `Error ${record.status}: No se pudo actualizar el empleado.`
       );
-    };
+    }
 
-    const updatedRecord = await response.json();
+    const updatedRecord = await record.json();
     alert("Datos actualizados correctamente.");
     return updatedRecord;
   } catch (error) {
     console.error("Error: " + error);
-  };
-};
+  }
+}
+
 
 async function deleteRecord(id) {
   try {
@@ -272,6 +296,11 @@ async function deleteRecord(id) {
         "Content-Type": "application/json",
       },
     });
+    if (!record.ok) {
+      throw new Error(
+        `Error ${response.status}: No se pudo crear el registro.`
+      );
+    }
     alert("Registro eliminado correctamente.");
   } catch (error) {
     console.error("Error: " + error);
@@ -289,6 +318,7 @@ export {
 };
 export {
   getAllRecords,
+  getRecord,
   getRecordForUser,
   getRecordForDate,
   getRecordForUserAndDate,
