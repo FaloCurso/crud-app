@@ -2,7 +2,7 @@
   "employees": [
     {
       "name": "Lucas",
-      "surname":"Rodríguez",
+      "surname": "Rodríguez",
       "username": "pepitoM",
       "password": "123456*",
       "admin": true,
@@ -11,7 +11,7 @@
     },
     {
       "name": "Margarita",
-      "surname":"Fernández",
+      "surname": "Fernández",
       "username": "pepitaM",
       "password": "98765*",
       "admin": false,
@@ -20,33 +20,68 @@
     },
     {
       "name": "Marta",
-      "surname":"Lopez",
+      "surname": "Lopez",
       "username": "Martita",
       "password": "112233.",
       "admin": false,
       "photo": "../img/foto4.jpg",
       "id": "3"
+    },
+    {
+      "name": "Falo",
+      "surname": "Fernandez",
+      "username": "Falo",
+      "password": "123.",
+      "admin": false,
+      "photo": "../img/foto1.jpg",
+      "id": "4"
+    },
+    {
+      "name": "Ana",
+      "surname": "Fernandez",
+      "username": "Ana",
+      "password": "123.",
+      "admin": false,
+      "photo": "../img/foto4.jpg",
+      "id": "5"
     }
-    
   ],
   "records": [
-      {
+    {
       "employee_id": "1",
-      "date": "24/02/2025",
-      "e/d": true,
+      "date": "2025/02/24",
+      "e_d": true,
       "entry_Time": "09:00",
       "departure_Time": "12:30",
       "worked_Hours": "3:30",
       "id": "3ad7"
-      },
-      {
-        "employee_id": "2",
-        "date": "25/02/2025",
-        "e/d": true,
-        "entry_Time": "09:00",
-        "departure_Time": "",
-        "worked_Hours": "",
-        "id": "3ad7"
-        }
-    ]
+    },
+    {
+      "employee_id": "2",
+      "date": "2025/02/25",
+      "e_d": false,
+      "entry_Time": "09:00",
+      "departure_Time": "11:00",
+      "worked_Hours": "2:00",
+      "id": "3ad8"
+    },
+    {
+      "id": "3-344",
+      "employeeId": "3",
+      "date": "2025/02/26",
+      "e_d": true,
+      "entry_Time": "6:00",
+      "departure_Time": "",
+      "worked_Hours": 1
+    },
+    {
+      "id": "2-401",
+      "employeeId": "2",
+      "date": "2025/02/26",
+      "e_d": false,
+      "entry_Time": "6:49",
+      "departure_Time": "7:00",
+      "worked_Hours": 10
+    }
+  ]
 }
