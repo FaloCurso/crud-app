@@ -46,15 +46,15 @@
       "departure_Time": "12:30",
       "worked_Hours": "03:30",
       "id": "3ad7"
-    },
+    },  
     {
       "employee_id": "2",
       "date": "2025-02-25",
-      "e_d": true,
+      "e_d": false,
       "entry_Time": "09:00",
       "departure_Time": "",
       "worked_Hours": "",
-      "id": "3ad8"
+      "id": "3ad9"
     }
   ]
 }

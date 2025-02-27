@@ -7,6 +7,7 @@ const URLFILTER = "?"
 const FILTERDATE = "date=";
 const FILTERNAME = "name=";
 const FILTERSURNAME = "surname=";
+const FILTERE_D = "e_d=";
 
 //Operaciones CRUD para employees
 async function getAllEmployees() {
@@ -211,6 +212,24 @@ async function getRecordForUserAndDate(employeeId, date) {
   };
 };
 
+async function getRecordForUserDateAndE_D(employeeId, date, E_D) {
+  try {
+    const response = await fetch(
+      URLRECORDS + URLFILTER + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date + URLAND + FILTERE_D + E_D
+    );
+    if (!response.ok) {
+      throw new Error(
+        `Error ${response.status}: No se pudo obtener los registros por empleado y fecha.`
+      );
+    };
+    const recordsUserDate = await response.json();
+    return recordsUserDate;
+  } catch (error) {
+    console.error("Error: " + error);
+    return null;
+  };
+};
+
 async function createRecord(
   employeeId,
   date,
@@ -322,6 +341,7 @@ export {
   getRecordForUser,
   getRecordForDate,
   getRecordForUserAndDate,
+  getRecordForUserDateAndE_D,
   createRecord,
   updateRecord,
   deleteRecord,
