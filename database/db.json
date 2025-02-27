@@ -22,7 +22,7 @@
       "name": "Marta",
       "surname": "Lopez",
       "username": "Martita",
-      "password": "112233.",
+      "password": "123.",
       "admin": false,
       "photo": "../img/foto4.jpg",
       "id": "3"
@@ -50,7 +50,7 @@
     {
       "employee_id": "1",
       "date": "2025/02/24",
-      "e_d": false,
+      "e_d": 0,
       "entry_Time": "09:00",
       "departure_Time": "12:30",
       "worked_Hours": "3:30",
@@ -59,29 +59,47 @@
     {
       "employee_id": "2",
       "date": "2025/02/25",
-      "e_d": false,
+      "e_d": 0,
       "entry_Time": "09:00",
       "departure_Time": "11:00",
       "worked_Hours": "2:00",
       "id": "3ad8"
     },
     {
-      "employee_id": "4",
-      "date": "2025/02/26",
-      "e_d": false,
-      "entry_Time": "17:05",
-      "departure_Time": "17:12",
-      "worked_Hours": "0h 7m",
-      "id": "4-885"
+      "employee_id": "2",
+      "date": "2025/02/27",
+      "e_d": 0,
+      "entry_Time": "12:48",
+      "departure_Time": "12:50",
+      "worked_Hours": "0h 2m",
+      "id": "4-456"
     },
     {
-      "id": "4-721",
-      "employeeId": "4",
-      "date": "2025/02/26",
-      "e_d": true,
-      "entry_Time": "17:06",
-      "departure_Time": "",
-      "worked_Hours": 0
+      "employee_id": "3",
+      "date": "2025/02/27",
+      "e_d": 0,
+      "entry_Time": "12:53",
+      "departure_Time": "12:53",
+      "worked_Hours": "0h 0m",
+      "id": "3-201"
+    },
+    {
+      "employee_id": "4",
+      "date": "2025/02/27",
+      "e_d": 0,
+      "entry_Time": "12:59",
+      "departure_Time": "12:59",
+      "worked_Hours": "0h 0m",
+      "id": "4-277"
+    },
+    {
+      "employee_id": "4",
+      "date": "2025/02/27",
+      "e_d": 0,
+      "entry_Time": "12:59",
+      "departure_Time": "12:59",
+      "worked_Hours": "0h 0m",
+      "id": "4-595"
     }
   ]
 }

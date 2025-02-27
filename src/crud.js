@@ -7,6 +7,7 @@ const URLFILTER = "?"
 const FILTERDATE = "date=";
 const FILTERNAME = "name=";
 const FILTERSURNAME = "surname=";
+const FILTERE_D = "e_d=";
 
 //Operaciones CRUD para employees
 async function getAllEmployees() {
@@ -97,7 +98,7 @@ async function updateEmployee(
       },
       body: JSON.stringify({ name, surname, username, password, admin, photo }),
     });
-    if (!response.ok) {
+    if (!employee.ok) {
       throw new Error(
         `Error ${response.status}: No se pudo actualizar el empleado.`
       );
@@ -201,6 +202,28 @@ async function getRecordForUserAndDate(employeeId, date) {
     if (!response.ok) {
       throw new Error(
         `Error ${response.status}: No se pudo obtener los registros por empleado y fecha.`
+      );
+    };
+    const recordsUserDate = await response.json();
+    return recordsUserDate;
+  } catch (error) {
+    console.error("Error: " + error);
+    return null;
+  };
+};
+
+async function getRecordForUserDateAndE_D(employeeId, date, E_D) {
+  try {
+    const response = await fetch(
+      URLRECORDS + URLFILTER + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date + URLAND + FILTERE_D + E_D, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    if (!response.ok) {
+      throw new Error(
+        Error `${response.status}: No se pudo obtener los registros por empleado y fecha.`
       );
     };
     const recordsUserDate = await response.json();
@@ -322,6 +345,7 @@ export {
   getRecordForUser,
   getRecordForDate,
   getRecordForUserAndDate,
+  getRecordForUserDateAndE_D,
   createRecord,
   updateRecord,
   deleteRecord,
