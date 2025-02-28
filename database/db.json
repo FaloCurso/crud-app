@@ -12,7 +12,7 @@
     {
       "name": "Margarita",
       "surname": "Fernández",
-      "username": "pepitaM",
+      "username": "pepa",
       "password": "123.",
       "admin": false,
       "photo": "../img/foto3.jpg",
@@ -100,6 +100,24 @@
       "departure_Time": "15:12",
       "worked_Hours": "00:01",
       "id": "3-44"
+    },
+    {
+      "employee_id": "2",
+      "date": "2025-02-28",
+      "e_d": false,
+      "entry_Time": "15:26",
+      "departure_Time": "15:26",
+      "worked_Hours": "00:00",
+      "id": "2-379"
+    },
+    {
+      "employee_id": "2",
+      "date": "2025-02-28",
+      "e_d": false,
+      "entry_Time": "15:26",
+      "departure_Time": "15:26",
+      "worked_Hours": "00:00",
+      "id": "2-373"
     }
   ]
 }

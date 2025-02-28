@@ -22,13 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const addEmployeeForm = document.getElementById("addEmployeeForm");
   const logoutButton = document.getElementById("logoutButton");
   const welcomeMessage = document.getElementById("welcomeMessage");
-  const idIndex = params.get("id"); 
+  const params = new URLSearchParams(window.location.search);
+  const p_id = params.get("id"); // Obtener ID de empleado de la URL
+  
 
   async function welcomeHandler() {
-    const employeeData = await getOneEmployee(idIndex);
-    const displayName = employeeData[0].name;
-    const displaySurname = employeeData[0].surname;
-
+    const employeeData = await getOneEmployee(p_id);
+    const displayName = employeeData.name;
+    const displaySurname = employeeData.surname;
+    
     welcomeMessage.textContent=`Bienvenido ${displayName} ${displaySurname}.`
   }
 
