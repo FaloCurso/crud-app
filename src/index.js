@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         if (ventrada===1){
             // administrador
-            alert("entrada como administrador");
+            // alert("entrada como administrador");
+            window.location.href = `gestion_Admin.html?id=${vId}`;
 
         }else if  (ventrada ===2) {
             // usuario admitido

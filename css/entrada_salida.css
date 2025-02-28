@@ -1,19 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Calibri, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .employee-card {
     font-family: Calibri, sans-serif;
     background-color: rgb(5, 156, 251);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    max-width: 600px;
+    max-width: 400px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center; 
+    text-align: center;
 }
 
 .photo-container {
-    flex: 0 0 auto; 
-    margin-right: 20px; 
+    flex: 0 0 auto;
+    margin-bottom: 20px;
 }
 
 .employee-photo {
@@ -21,22 +37,86 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
+
 #employee-name {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
 }
+
 #parte-info {
+    display: none;
     color: white;
+    margin-bottom: 20px;
+    width: 100%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+parte-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;  /* Espacio entre cada campo */
+    max-width: 300px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group label {
+    width: 120px; 
+    white-space: nowrap;  /* Evita que las labels se dividan en varias líneas */
+    overflow: hidden;  /* Oculta el texto que se desborda */
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.form-group input {
+    width: calc(100% - 130px);  /* Resta el ancho de las labels para los inputs */
+    padding: 5px 10px;  /* Ajusta el padding para un tamaño más pequeño */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.readonly-input {
+    border: none;
+    background: none;
+    outline: none;
 }
 
 .button-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     gap: 10px;
-    margin-left: auto;
+}
+
+button {
+    padding: 10px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
 }
 
 #cerrar-btn {
@@ -46,4 +126,81 @@
 
 #cerrar-btn:hover {
     background-color: #5a6268;
+}
+
+@media (max-width: 480px) {
+    .employee-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .employee-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #employee-name {
+        font-size: 18px;
+    }
+
+    .form-group {
+        flex-direction: column;  /* Cambia la dirección de los campos a columna */
+        align-items: flex-start; /* Alineación de los campos a la izquierda */
+    }
+
+    .form-group label {
+        width: 100%; /* Las labels ocupan todo el ancho disponible */
+        margin-bottom: 5px; /* Espacio entre la label y el input */
+    }
+
+    .form-group input {
+        width: 100%; /* Los inputs ocupan el 100% del contenedor */
+    }
+   
+    .button-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    button {
+        width: 32%;  /* Ajusta los botones en pantallas pequeñas */
+    }
+}
+@media (max-width: 480px) {
+    .employee-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .employee-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #employee-name {
+        font-size: 18px;
+    }
+
+    .form-group {
+        flex-direction: column;  /* Cambia la dirección de los campos a columna */
+        align-items: flex-start; /* Alineación de los campos a la izquierda */
+    }
+
+    .form-group label {
+        width: 100%; /* Las labels ocupan todo el ancho disponible */
+        margin-bottom: 5px; /* Espacio entre la label y el input */
+    }
+
+    .form-group input {
+        width: 100%; /* Los inputs ocupan el 100% del contenedor */
+    }
+   
+    .button-container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    button {
+        width: 32%;  /* Ajusta los botones en pantallas pequeñas */
+    }
 }
