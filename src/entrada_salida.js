@@ -217,4 +217,3 @@ function mostrarParte(parte) {
 
     sessionStorage.setItem("parteActivo", JSON.stringify(parte));
 }
-
