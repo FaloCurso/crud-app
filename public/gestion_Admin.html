@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Registros y Empleados</title>
+    <link rel="stylesheet" href="../css/gestion_Admin.css">
 </head>
 <body>
-    <h1>Gestión de Registros</h1>
+    <h1 id="welcomeMessage"></h1>
+    <h2>Gestión de Registros</h2>
     <label for="employeeFullName">Nombre completo del empleado:</label>
     <input type="text" id="employeeFullName">
     
@@ -16,7 +18,7 @@
     <button id="searchButton">Buscar</button>
 
     <div class="table-container">
-        <table border="1">
+        <table>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -33,7 +35,7 @@
         </table>
     </div>
 
-    <h1>Gestión de Empleados</h1>
+    <h2>Gestión de Empleados</h2>
     <form id="addEmployeeForm">
         <label for="name">Nombre:</label>
         <input type="text" id="name" required>
@@ -57,7 +59,7 @@
     </form>
 
     <div class="table-container">
-        <table border="1">
+        <table>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -73,6 +75,8 @@
             <tbody id="employeesTableBody"></tbody>
         </table>
     </div>
+
+    <button type="button" id="logoutButton">Cerrar sesion</button>
 
     <script src="../src/gestion_Admin.js" type="module"></script>
 </body>

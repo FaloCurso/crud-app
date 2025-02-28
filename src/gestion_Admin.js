@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const recordsTableBody = document.getElementById("recordsTableBody");
   const employeesTableBody = document.querySelector("#employeesTableBody");
   const addEmployeeForm = document.getElementById("addEmployeeForm");
+  const logoutButton = document.getElementById("logoutButton");
+  const welcomeMessage = document.getElementById("welcomeMessage");
+  // const idIndex = params.get("id"); Descomentar al mergeo
+
+  // async function welcomeHandler() {
+  //   const employeeData = await getOneEmployee(idIndex);
+  //   const displayName = employeeData[0].name;
+  //   const displaySurname = employeeData[0].surname;
+
+  //   welcomeMessage.textContent=`Bienvenido ${displayName} ${displaySurname}.`
+  // }
 
   addEmployeeForm.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita el envío por defecto del formulario
@@ -264,11 +275,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const row = event.target.closest("tr");
         const recordId = event.target.getAttribute("data-id");
 
-        if (!recordId) {
-          console.error("Error: recordId es undefined");
-          return;
-        }
-
         const dateValue = row.querySelector(".edit-date").value;
         const employeeName = row.cells[1].textContent.trim(); // Nombre del empleado
 
@@ -339,7 +345,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // welcomeHandler();
   searchButton.addEventListener("click", handleSearch);
   fetchRecords();
   fetchEmployees();
+
+  logoutButton.addEventListener("click", () => {
+    window.location.replace('index.html');
+  });
+
 });
