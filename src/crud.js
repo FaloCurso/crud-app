@@ -197,11 +197,11 @@ async function getRecordForDate(date) {
 async function getRecordForUserAndDate(employeeId, date) {
   try {
     const response = await fetch(
-      URLRECORDS + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
+      URLRECORDS + URLFILTER + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
     );
     if (!response.ok) {
       throw new Error(
-        `Error ${response.status}: No se pudo obtener los registros por empleado y fecha.`
+        `Error ${response.status}: No se pudo obtener los registros por fecha.`
       );
     };
     const recordsUserDate = await response.json();

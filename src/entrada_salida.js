@@ -26,15 +26,15 @@ async function EmployeeData() {
 
         const partes = await getRecordForUserAndDate(p_id, fechaFormato);
         
-        if (partes.length === 0 || (partes[0].e_d === 0 && partes.length === 0)) {
+        if (partes.length === 0 || (partes[0].e_d === false && partes.length === 0)) {
             entradaBtn.disabled = false;
             salidaBtn.disabled = true;
-        } else if ((partes.length === 2 && partes[1].e_d === 1) || (partes.length === 1 && partes[0].e_d === 1)) {
+        } else if ((partes.length === 2 && partes[1].e_d === true) || (partes.length === 1 && partes[0].e_d === true)) {
             entradaBtn.disabled = true;
             salidaBtn.disabled = false;
             // alert("entra el else if primero")
             
-        } else if (partes.length === 2 && partes[1].e_d === 0) {
+        } else if (partes.length === 2 && partes[1].e_d === false) {
             entradaBtn.disabled = true;
             salidaBtn.disabled = true;
            
@@ -74,7 +74,7 @@ async function registrarEntrada(employee_id, fechaFormato) {
         const registroData = {
             employee_id,
             date: fechaFormato,
-            e_d: 1,
+            e_d: true,
             entry_Time: horaFichar,
             departure_Time: "",
             worked_Hours: 0,
@@ -108,7 +108,7 @@ async function registrarSalida(employee_id, fechaFormato, e_d, entry_Time, id) {
         //buscar el parte para fichar la salida
         // alert(`valores de busqueda ${employee_id}, la fecha ${fechaFormato} `);
 
-        const partes = await getRecordForUserDateAndE_D(employee_id, fechaFormato, 1);
+        const partes = await getRecordForUserDateAndE_D(employee_id, fechaFormato, true);
 
         if (!partes || partes.length === 0) {
             alert("No se encontró el registro de entrada.");
@@ -120,7 +120,7 @@ async function registrarSalida(employee_id, fechaFormato, e_d, entry_Time, id) {
         const registroData = {
             employee_id,
             date: fechaFormato,
-            e_d: 0,
+            e_d: false,
             entry_Time: entry_Time,
             departure_Time: horaSalida,
             worked_Hours: tiempo,
@@ -149,9 +149,14 @@ async function registrarSalida(employee_id, fechaFormato, e_d, entry_Time, id) {
 function calcularTiempo(horaInicio, horaFin) {
     let [hInicio, mInicio] = horaInicio.split(":").map(Number);
     let [hFin, mFin] = horaFin.split(":").map(Number);
+    
     let minutosTrabajados = (hFin * 60 + mFin) - (hInicio * 60 + mInicio);
     if (minutosTrabajados < 0) minutosTrabajados += 24 * 60;
-    return `${Math.floor(minutosTrabajados / 60)}:${minutosTrabajados % 60}`;
+    
+    let horas = String(Math.floor(minutosTrabajados / 60)).padStart(2, "0"); 
+    let minutos = String(minutosTrabajados % 60).padStart(2, "0"); 
+    
+    return `${horas}:${minutos}`;
 }
 
 function obtenerHoraActual() {
@@ -167,7 +172,7 @@ function mostrarParte(parte) {
     // let tiempoTranscurrido ;
     let estado;
     
-    if ( parte.e_d === 0) {
+    if ( parte.e_d === false) {
         estado = "cerrado";
     }else{
         estado = "abierto";

@@ -14,6 +14,7 @@ header {
 
 header h1 {
   padding-top: 19vh;
+  color: var(--font-primary-color);
 }
 
 .container {

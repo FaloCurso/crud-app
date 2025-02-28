@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const addEmployeeForm = document.getElementById("addEmployeeForm");
   const logoutButton = document.getElementById("logoutButton");
   const welcomeMessage = document.getElementById("welcomeMessage");
-  // const idIndex = params.get("id"); Descomentar al mergeo
+  const idIndex = params.get("id"); 
 
-  // async function welcomeHandler() {
-  //   const employeeData = await getOneEmployee(idIndex);
-  //   const displayName = employeeData[0].name;
-  //   const displaySurname = employeeData[0].surname;
+  async function welcomeHandler() {
+    const employeeData = await getOneEmployee(idIndex);
+    const displayName = employeeData[0].name;
+    const displaySurname = employeeData[0].surname;
 
-  //   welcomeMessage.textContent=`Bienvenido ${displayName} ${displaySurname}.`
-  // }
+    welcomeMessage.textContent=`Bienvenido ${displayName} ${displaySurname}.`
+  }
 
   addEmployeeForm.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita el envío por defecto del formulario
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // welcomeHandler();
+  welcomeHandler();
   searchButton.addEventListener("click", handleSearch);
   fetchRecords();
   fetchEmployees();
