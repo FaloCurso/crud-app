@@ -197,7 +197,7 @@ async function getRecordForDate(date) {
 async function getRecordForUserAndDate(employeeId, date) {
   try {
     const response = await fetch(
-      URLRECORDS + URLFILTER + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
+      URLRECORDS + FILTEREMPLOYEEID + employeeId + URLAND + FILTERDATE + date
     );
     if (!response.ok) {
       throw new Error(

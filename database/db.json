@@ -2,212 +2,33 @@
   "employees": [
     {
       "name": "Lucas",
-      "surname": "Rodríguez",
+      "surname": "Rodriguez",
       "username": "pepitoM",
-      "password": "123456*",
+      "password": "123456",
       "admin": true,
       "photo": "../img/foto1.jpg",
       "id": "1"
     },
     {
-      "name": "Margarita",
-      "surname": "Fernández",
+      "name": "Empleado2",
+      "surname":"xxxxxx",
       "username": "pepitaM",
-      "password": "123.",
+      "password": "98765*",
       "admin": false,
       "photo": "../img/foto3.jpg",
       "id": "2"
-    },
-    {
-      "name": "Marta",
-      "surname": "Lopez",
-      "username": "Martita",
-      "password": "123.",
-      "admin": false,
-      "photo": "../img/foto4.jpg",
-      "id": "3"
-    },
-    {
-      "name": "Falo",
-      "surname": "Fernandez",
-      "username": "Falo",
-      "password": "123.",
-      "admin": false,
-      "photo": "../img/foto2.webp",
-      "id": "4"
-    },
-    {
-      "name": "Ana",
-      "surname": "Fernandez",
-      "username": "Ana",
-      "password": "123.",
-      "admin": false,
-      "photo": "..-img-foto4.jpg",
-      "id": "5"
     }
+    
   ],
   "records": [
     {
       "employee_id": "1",
       "date": "2025-02-24",
-      "e_d": 0,
+      "e/d": true,
       "entry_Time": "09:00",
       "departure_Time": "12:30",
-      "worked_Hours": "3:30",
+      "worked_Hours": "03:30",
       "id": "3ad7"
-    },
-    {
-      "employee_id": "2",
-      "date": "2025-02-24",
-      "e_d": 0,
-      "entry_Time": "09:00",
-      "departure_Time": "11:00",
-      "worked_Hours": "2:00",
-      "id": "3ad8"
-    },
-    {
-      "employee_id": "2",
-      "date": "2025-02-25",
-      "e_d": 0,
-      "entry_Time": "12:48",
-      "departure_Time": "12:50",
-      "worked_Hours": "0:2",
-      "id": "4-456"
-    },
-    {
-      "employee_id": "3",
-      "date": "2025-02-25",
-      "e_d": 0,
-      "entry_Time": "12:53",
-      "departure_Time": "12:53",
-      "worked_Hours": "0:0",
-      "id": "3-201"
-    },
-    {
-      "employee_id": "4",
-      "date": "2025-02-25",
-      "e_d": 0,
-      "entry_Time": "10:23",
-      "departure_Time": "13:26",
-      "worked_Hours": "3:3",
-      "id": "4-302"
-    },
-    {
-      "employee_id": "4",
-      "date": "2025-02-25",
-      "e_d": 0,
-      "entry_Time": "12:24",
-      "departure_Time": "13:24",
-      "worked_Hours": "1:0",
-      "id": "4-792"
-    },
-    {
-      "employee_id": "4",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "7:25",
-      "departure_Time": "7:30",
-      "worked_Hours": "0:5",
-      "id": "4-598"
-    },
-    {
-      "employee_id": "4",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "6:30",
-      "departure_Time": "7:33",
-      "worked_Hours": "1:3",
-      "id": "4-27"
-    },
-    {
-      "employee_id": "3",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "7:35",
-      "departure_Time": "7:35",
-      "worked_Hours": "0:0",
-      "id": "3-775"
-    },
-    {
-      "employee_id": "2",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "7:41",
-      "departure_Time": "7:43",
-      "worked_Hours": "0:2",
-      "id": "2-119"
-    },
-    {
-      "employee_id": "2",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "7:44",
-      "departure_Time": "7:45",
-      "worked_Hours": "0:1",
-      "id": "2-707"
-    },
-    {
-      "employee_id": "4",
-      "date": "2025-02-27",
-      "e_d": 0,
-      "entry_Time": "7:54",
-      "departure_Time": "7:55",
-      "worked_Hours": "0:1",
-      "id": "4-743"
-    },
-    {
-      "employee_id": "3",
-      "date": "2025-02-27",
-      "e_d": 0,
-      "entry_Time": "9:09",
-      "departure_Time": "9:15",
-      "worked_Hours": "0:6",
-      "id": "4-364"
-    },
-    {
-      "employee_id": "3",
-      "date": "2025-02-27",
-      "e_d": 0,
-      "entry_Time": "9:31",
-      "departure_Time": "9:33",
-      "worked_Hours": "0:2",
-      "id": "4-87"
-    },
-    {
-      "employee_id": "2",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "12:01",
-      "departure_Time": "12:02",
-      "worked_Hours": "0:1",
-      "id": "2-34"
-    },
-    {
-      "employee_id": "2",
-      "date": "2025-02-26",
-      "e_d": 0,
-      "entry_Time": "12:00",
-      "departure_Time": "12:07",
-      "worked_Hours": "0:7",
-      "id": "2-221"
-    },
-    {
-      "employee_id": "3",
-      "date": "2025-02-28",
-      "e_d": 0,
-      "entry_Time": "13:56",
-      "departure_Time": "13:56",
-      "worked_Hours": "0:0",
-      "id": "3-831"
-    },
-    {
-      "employee_id": "3",
-      "date": "2025-02-28",
-      "e_d": 0,
-      "entry_Time": "13:56",
-      "departure_Time": "13:57",
-      "worked_Hours": "0:1",
-      "id": "3-624"
-    }
-  ]
+      }
+    ]
 }
