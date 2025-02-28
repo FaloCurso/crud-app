@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }" class="edit-departure"></td>
             <td class="worked-hours">${
               record.worked_Hours
-            }</td> <!-- Se actualizará dinámicamente -->
+            }</td> <!-- Actualizacion dinamica -->
             <td>${record.e_d ? "Sí" : "No"}</td>
             <td>
                 <button class="save-btn" data-id="${record.id}">Guardar</button>

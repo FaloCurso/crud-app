@@ -32,7 +32,7 @@
       "surname": "Mendez",
       "username": "lucasM",
       "password": "123456",
-      "admin": true,
+      "admin": false,
       "photo": "../img/foto1.jpg",
       "id": "4"
     }

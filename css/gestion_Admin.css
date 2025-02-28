@@ -1,3 +1,39 @@
+:root{
+  --buttons-color: #1a73e8;
+  --font-primary-color: white;
+  --font-secondary-color: #1c76eb;
+  --font-tertiary-color: black;
+
+}
+
+header {
+  height: 12vh;
+  background-color: var(--buttons-color);
+
+}
+
+header h1 {
+  padding-top: 19vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  text-align: left; 
+  height: 40vh; 
+  width: 95%; 
+  margin: 0 auto; 
+}
+.container label,
+.container input,
+.container button {
+  margin: 1vh 0; 
+  width: 100%; 
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,6 +43,7 @@ body {
 
 h1, h2 {
   text-align: center;
+  color: var(--font-secondary-color);
 }
 
 .table-container {
@@ -22,20 +59,24 @@ table {
 }
 
 thead {
-  background-color: #333;
-  color: white;
+  background-color: var(--buttons-color);
+  color: var(--font-color);
 }
 
 td, th {
   border: 1px solid #ddd;
   padding: 1vh 1vw;
+  color: var(--font-primary-color);
   text-align: center;
   word-wrap: break-word;
 }
+td {
+  color: var(--font-tertiary-color);
+}
 
 form {
-  width: 80vw;
-  margin: 2vh auto;
+  width: 75vw;
+  margin: auto;
   padding: 2vh;
   background: #f4f4f4;
   border-radius: 1vw;
@@ -44,21 +85,51 @@ form {
 
 label, input, button {
   display: block;
-  width: 100%;
+  width: 90%;
   margin-bottom: 1vh;
   padding: 1vh;
   max-width: 100%;
 }
 
 button {
-  background: #333;
-  color: white;
+  background: var(--buttons-color);
+  color: var(--font-primary-color);
   border: none;
   cursor: pointer;
 }
 
-button:hover {
-  background: #555;
+#searchButton, #create-employee-btn {
+  width: 91.5%;
+}
+
+#searchButton:hover {
+  background-color: orange;
+}
+.save-employee-btn:hover , .save-btn:hover {
+  background-color: green;
+}
+.delete-btn:hover, .delete-employee-btn:hover{
+  background-color: red;
+}
+#create-employee-btn:hover {
+  background-color: darkgreen;
+}
+#logoutButton {
+  width: 20vw;
+  margin-left: 40vw;
+}
+#logoutButton:hover {
+  background-color: crimson;
+}
+
+footer {
+  height: 8vh;
+  background-color: var(--buttons-color);
+}
+p {
+  text-align: center;
+  color: var(--font-primary-color);
+  padding-top: 3vh;
 }
 
 @media (max-width: 768px) {

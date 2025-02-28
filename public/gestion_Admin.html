@@ -7,15 +7,19 @@
     <link rel="stylesheet" href="../css/gestion_Admin.css">
 </head>
 <body>
-    <h1 id="welcomeMessage"></h1>
-    <h2>Gestión de Registros</h2>
-    <label for="employeeFullName">Nombre completo del empleado:</label>
-    <input type="text" id="employeeFullName">
-    
-    <label for="date">Fecha:</label>
-    <input type="date" id="date">
-    
-    <button id="searchButton">Buscar</button>
+    <header>
+        <h1 id="welcomeMessage"></h1>
+    </header>
+    <div class="container">
+        <h2>Gestión de Registros</h2>
+        <label for="employeeFullName">Nombre completo del empleado:</label>
+        <input type="text" id="employeeFullName">
+        
+        <label for="date">Fecha:</label>
+        <input type="date" id="date">
+        
+        <button id="searchButton">Buscar</button>
+    </div>
 
     <div class="table-container">
         <table>
@@ -26,7 +30,7 @@
                     <th>Fecha</th>
                     <th>Hora de Entrada</th>
                     <th>Hora de Salida</th>
-                    <th>Horas Trabajadas</th>
+                    <th>Tiempo trabajado</th>
                     <th>¿Trabajando?</th>
                     <th>Acciones</th>
                 </tr>
@@ -55,7 +59,7 @@
         <label for="photo">Foto URL:</label>
         <input type="text" id="photo">
 
-        <button type="submit">Añadir Empleado</button>
+        <button id="create-employee-btn" type="submit">Añadir Empleado</button>
     </form>
 
     <div class="table-container">
@@ -80,4 +84,7 @@
 
     <script src="../src/gestion_Admin.js" type="module"></script>
 </body>
+<footer>
+ <p>Created by FrostyValue.</p>
+</footer>
 </html>
