@@ -1,6 +1,6 @@
 import {getAllEmployees, getOneEmployee} from "./crud.js"
 let vId ;
-
+/*variable empleado*/
 document.addEventListener('DOMContentLoaded', () => {
     const loginButton = document.getElementById('loginButton');
     
