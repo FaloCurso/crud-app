@@ -204,9 +204,9 @@
       "employee_id": "3",
       "date": "2025-02-28",
       "e_d": 0,
-      "entry_Time": "13:56",
+      "entry_Time": "12:56",
       "departure_Time": "13:57",
-      "worked_Hours": "0:1",
+      "worked_Hours": "1:1",
       "id": "3-624"
     }
   ]

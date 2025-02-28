@@ -1,6 +1,6 @@
 import { getOneEmployee, getRecordForUserAndDate, createRecord, updateRecord, getRecordForUserDateAndE_D } from "./crud.js";
 // Inicializar matriz
-
+// grabando
 
 async function EmployeeData() {
     const params = new URLSearchParams(window.location.search);
