@@ -1,90 +1,94 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestión de Registros y Empleados</title>
-    <link rel="stylesheet" href="../css/gestion_Admin.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../css/gestion_Admin.css" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+  </head>
+  <body>
     <header>
+      <div id="headerDiv">
+        <img id="webLogo" src="../img/logo.webp" alt="Web Logo" />
         <h1 id="welcomeMessage"></h1>
+      </div>
     </header>
     <div class="container">
-        <h2>Gestión de Registros</h2>
-        <label for="employeeFullName">Nombre completo del empleado:</label>
-        <input type="text" id="employeeFullName">
-        
-        <label for="date">Fecha:</label>
-        <input type="date" id="date">
-        
-        <button id="searchButton">Buscar</button>
+      <h2>Gestión de Registros</h2>
+      <label for="employeeFullName">Nombre completo del empleado:</label>
+      <input type="text" id="employeeFullName" />
+
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" />
+
+      <button id="searchButton">Buscar</button>
     </div>
 
     <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Empleado</th>
-                    <th>Fecha</th>
-                    <th>Hora de Entrada</th>
-                    <th>Hora de Salida</th>
-                    <th>Tiempo trabajado</th>
-                    <th>¿Trabajando?</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="recordsTableBody"></tbody>
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Empleado</th>
+            <th>Fecha</th>
+            <th>Hora de Entrada</th>
+            <th>Hora de Salida</th>
+            <th>Tiempo trabajado</th>
+            <th>¿Trabajando?</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="recordsTableBody"></tbody>
+      </table>
     </div>
 
     <h2>Gestión de Empleados</h2>
     <form id="addEmployeeForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" required>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required />
 
-        <label for="surname">Apellido:</label>
-        <input type="text" id="surname" required>
+      <label for="surname">Apellido:</label>
+      <input type="text" id="surname" required />
 
-        <label for="username">Usuario:</label>
-        <input type="text" id="username" required>
+      <label for="username">Usuario:</label>
+      <input type="text" id="username" required />
 
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" required>
+      <label for="password">Contraseña:</label>
+      <input type="password" id="password" required />
 
-        <label for="admin">Administrador:</label>
-        <input type="checkbox" id="admin">
+      <label for="admin">Administrador:</label>
+      <input type="checkbox" id="admin" />
 
-        <label for="photo">Foto URL:</label>
-        <input type="text" id="photo">
+      <label for="photo">Foto URL:</label>
+      <input type="text" id="photo" />
 
-        <button id="create-employee-btn" type="submit">Añadir Empleado</button>
+      <button id="create-employee-btn" type="submit">Añadir Empleado</button>
     </form>
 
     <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>Usuario</th>
-                    <th>Contraseña</th>
-                    <th>Administrador</th>
-                    <th>URL foto</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="employeesTableBody"></tbody>
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Usuario</th>
+            <th>Contraseña</th>
+            <th>Administrador</th>
+            <th>URL foto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="employeesTableBody"></tbody>
+      </table>
     </div>
 
     <button type="button" id="logoutButton">Cerrar sesion</button>
 
     <script src="../src/gestion_Admin.js" type="module"></script>
-</body>
-<footer>
- <p>Created by FrostyValue.</p>
-</footer>
+  </body>
+  <footer>
+    <p>Created by FrostyValue.</p>
+  </footer>
 </html>

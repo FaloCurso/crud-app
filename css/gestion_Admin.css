@@ -12,8 +12,18 @@ header {
 
 }
 
-header h1 {
-  padding-top: 19vh;
+#headerDiv {
+  display: flex;
+  align-items: center;
+  padding-top: 2vh;
+  gap: 1rem;
+}
+#webLogo {
+  height: 8vh;
+  width: 8vw;
+}
+
+h1 {
   color: var(--font-primary-color);
 }
 
@@ -42,7 +52,7 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2 {
+h2 {
   text-align: center;
   color: var(--font-secondary-color);
 }

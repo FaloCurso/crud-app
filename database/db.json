@@ -6,7 +6,7 @@
       "username": "Lucas",
       "password": "123.",
       "admin": true,
-      "photo": "../img/foto1.jpg",
+      "photo": "../img/foto1.webp",
       "id": "1"
     },
     {
@@ -15,7 +15,7 @@
       "username": "pepa",
       "password": "123.",
       "admin": false,
-      "photo": "../img/foto3.jpg",
+      "photo": "../img/foto3.webp",
       "id": "2"
     },
     {
@@ -24,7 +24,7 @@
       "username": "Martita",
       "password": "123.",
       "admin": false,
-      "photo": "../img/foto4.jpg",
+      "photo": "../img/foto4.webp",
       "id": "3"
     },
     {
@@ -42,7 +42,7 @@
       "username": "Ana",
       "password": "123.",
       "admin": false,
-      "photo": "..-img-foto4.jpg",
+      "photo": "..-img-foto4.webp",
       "id": "5"
     },
     {
@@ -51,7 +51,7 @@
       "username": "Satur",
       "password": "123.",
       "admin": true,
-      "photo": "../img/foto1.jpg",
+      "photo": "../img/foto1.webp",
       "id": "c0ba"
     }
   ],
