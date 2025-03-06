@@ -32,7 +32,7 @@ CRUD App es una aplicación web para la gestión de jornada laboral, permitiendo
    ```
 4. Inicia el servidor:
    ```bash
-   npm start
+   npm run startserver
    ```
 5. Abre el navegador y accede a:
    ```

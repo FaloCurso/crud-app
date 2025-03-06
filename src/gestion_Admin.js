@@ -24,37 +24,36 @@ document.addEventListener("DOMContentLoaded", () => {
   const welcomeMessage = document.getElementById("welcomeMessage");
   const params = new URLSearchParams(window.location.search);
   const p_id = params.get("id"); // Obtener ID de empleado de la URL
-  
+
   welcomeHandler();
 
   async function welcomeHandler() {
     console.log("Ejecutando welcomeHandler...");
     if (!p_id) {
-        console.warn("No se encontró un ID en la URL.");
-        welcomeMessage.textContent = "Bienvenido.";
-        return;
+      console.warn("No se encontró un ID en la URL.");
+      welcomeMessage.textContent = "Bienvenido.";
+      return;
     }
 
     try {
       const employeeData = await getOneEmployee(p_id);
       console.log("Datos del empleado:", employeeData);
-        
-        if (!employeeData || !employeeData.name || !employeeData.surname) {
-            console.warn("No se encontraron datos del usuario.");
-            welcomeMessage.textContent = "Bienvenido.";
-            return;
-        }
 
-        const displayName = employeeData.name;
-        const displaySurname = employeeData.surname;
-        welcomeMessage.textContent = `Bienvenido ${displayName} ${displaySurname}.`;
-        console.log("Mensaje en el DOM:", welcomeMessage.textContent);
-
-    } catch (error) {
-        console.error("Error al obtener el empleado:", error);
+      if (!employeeData || !employeeData.name || !employeeData.surname) {
+        console.warn("No se encontraron datos del usuario.");
         welcomeMessage.textContent = "Bienvenido.";
+        return;
+      }
+
+      const displayName = employeeData.name;
+      const displaySurname = employeeData.surname;
+      welcomeMessage.textContent = `Bienvenido ${displayName} ${displaySurname}.`;
+      console.log("Mensaje en el DOM:", welcomeMessage.textContent);
+    } catch (error) {
+      console.error("Error al obtener el empleado:", error);
+      welcomeMessage.textContent = "Bienvenido.";
     }
-}
+  }
 
   addEmployeeForm.addEventListener("submit", async (event) => {
     event.preventDefault(); // Evita el envío por defecto del formulario
@@ -373,7 +372,6 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchEmployees();
 
   logoutButton.addEventListener("click", () => {
-    window.location.replace('index.html');
+    window.location.replace("index.html");
   });
-
 });
